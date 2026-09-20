@@ -4,29 +4,29 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇱 CL 01 - xiaohe
+- name: 🇪🇸 西班牙 (Spain) 01 - xiaohe
   type: vless
-  server: 34.176.98.128
-  port: 443
-  uuid: 4fe7ceb2-160c-4564-89e6-8f5fd0b05cd5
+  server: 212.227.235.66
+  port: 2053
+  uuid: ead0dd61-d398-40ad-80d6-a0e1e516d7d3
   udp: true
   tls: true
   skip-cert-verify: true
   reality-opts:
-    public-key: 3ekBKAuIIAOjtkKJ0T-qpC7uJsqsY2fVLRB6C70A5hw
-  servername: www.cloudflare.com
-  client-fingerprint: ios
+    public-key: 7Y6Xb5Ql_03K25x8yKUSOKI2JTOMyv2nyCcFza90uxk
+  servername: www.apple.com
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇨🇱 CL 01 - xiaohe
+  - 🇪🇸 西班牙 (Spain) 01 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇱 CL 01 - xiaohe
+  - 🇪🇸 西班牙 (Spain) 01 - xiaohe
 rules:
 - MATCH,PROXIES
